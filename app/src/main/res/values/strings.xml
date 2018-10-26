@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TryEditTextKeyboard</string>
+    <string name="TextName">TextName</string>
+
+
+
+    <string name="TextAge"></string>
+
+    <string name="radioStudent">학생</string>
+    <string name="radioOfficer">직장인</string>
+    <string name="radioMale">남자</string>
+    <string name="radioFemale">여자</string>
+    <string name="buttonShowName">이름보기</string>
+    <string name="buttonShowAge">나이보기</string>
+    <string name="buttonShowResult">결과보기</string>
+</resources>

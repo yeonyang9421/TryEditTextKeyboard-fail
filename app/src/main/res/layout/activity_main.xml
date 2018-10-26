@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textviewName"
+        android:text="이름"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/TextName"
+
+        android:hint="이름을 입력하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:text="나이"
+        android:id="@+id/textviewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/TextAge"
+
+        android:hint="나이를 입력하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:text="성별"
+        android:id="@+id/textviewSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+   <RadioGroup
+       android:id="@+id/radioGroupSex"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="20dp">
+
+       <RadioButton
+           android:id="@+id/radioFemale"
+           android:text="@string/radioFemale"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <RadioButton
+           android:id="@+id/radioMale"
+           android:text="@string/radioMale"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+   </RadioGroup>
+    <TextView
+        android:id="@+id/textviewJob"
+        android:text="직업"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioStudent"
+            android:text="@string/radioStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radioOfficer"
+            android:text="직장인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonShowName"
+        android:text="@string/buttonShowName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/buttonShowAge"
+        android:text="@string/buttonShowAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonShowResult"
+        android:text="@string/buttonShowResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+ <TextView
+     android:id="@+id/textResult"
+     android:text="ddd"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="25dp"
+     android:textColor="@color/colorPrimary"/>
+
+
+</LinearLayout>
