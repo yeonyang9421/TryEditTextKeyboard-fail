@@ -1,5 +1,7 @@
 package kr.co.woobi.imyeon.tryedittextkeyboard;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -9,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener ,View.OnKeyListener {
         RadioGroup radioGroupSex, radioGroupJob;
@@ -60,8 +63,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonShowResult:
                 textResult.setText("이름은 " + name +", 나이는 " + age +"세, 성별은 "
                 + sex + ", 직업은 "+ job +"입니다. ");
+
+                Intent intent=new Intent(this, ResultActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("age",age);
+                intent.putExtra("sex", sex);
+                intent.putExtra("job",job);
+                startActivityForResult(intent, 1000);
                 break;
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==1000 && resultCode ==RESULT_OK){
+            Toast.makeText(this, " 확인", Toast.LENGTH_SHORT).show();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
